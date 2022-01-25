@@ -1,0 +1,7 @@
+$nomention
+$title[Clicks 🌎]
+$description[👥 $getVar[clickp] Pessoas clicaram $getVar[click] vezes]
+$footer[$username]
+$footerIcon[$authorAvatar]
+$thumbnail[$serverIcon]
+$addButton[no;clicar;clicar;primary;no;🖱️]
