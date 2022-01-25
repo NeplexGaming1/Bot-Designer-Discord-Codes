@@ -5,3 +5,27 @@ $footer[$username]
 $footerIcon[$authorAvatar]
 $thumbnail[$serverIcon]
 $addButton[no;clicar;clicar;primary;no;🖱️]
+
+$onInteraction[clicar]:
+
+$if[$getVar[click2;$authorID]==0]
+$setVar[click2;1;$authorID]
+$setVar[click;$sum[$getVar[click];1]]
+$setVar[clickp;$sum[$getVar[clickp];1]]
+$nomention
+$title[Clicks 🌎]
+$description[👥 $getVar[clickp] Pessoas clicaram $getVar[click] vezes]
+$footer[$username]
+$footerIcon[$authorAvatar]
+$thumbnail[$serverIcon]
+$endif
+$if[$getVar[click2;$authorID]==1]
+$setVar[click;$sum[$getVar[click];1]]
+$setVar[taks;$sum[$getVar[taks;$authorID];$random[0;1]];$authorID]
+$nomention
+$title[Clicks 🌎]
+$description[👥 $getVar[clickp] Pessoas clicaram $getVar[click] vezes]
+$footer[$username]
+$footerIcon[$authorAvatar]
+$thumbnail[$serverIcon]
+$endif
